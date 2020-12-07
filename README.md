@@ -1,6 +1,6 @@
 # JavaAgent
 ```
-package com.snc;
+package com.abc;
 
 import java.io.IOException;
 import java.lang.management.*;
@@ -73,7 +73,7 @@ public class StreamExternalEventsWithAttachAPISample {
 
             for (final Long threadID : threadMXBean.getAllThreadIds()) {
                ThreadInfo info = threadMXBean.getThreadInfo(threadID);
-               while(info.getThreadName().contains("glide.scheduler.worker.1")){
+               while(info.getThreadName().contains("threadName")){
                    System.out.println("Thread name: " + info.getThreadName() + "      " + info.getThreadState());
                  //   MemoryMXBean memoryMXBean = ManagementFactory.getMemoryMXBean();
             System.out.println(String.format("Initial memory: %.2f GB",
